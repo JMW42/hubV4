@@ -1,0 +1,29 @@
+html{
+    background-color: black;
+}
+
+#div_login{
+    min-width: 200px;
+    width: 50%;
+
+    background-color: rgb(50,50,50);
+    margin: auto;
+    text-align: center;
+    color: lime;
+    margin-top: 25vh;
+    font-family: "Courier New";
+}
+
+#div_login form{
+    font-size: 22pt;
+}
+
+#div_login input, button{
+    font-size: 18pt;
+}
+
+#div_login p{
+    font-size: 18pt;
+    text-align: center;
+    
+}
