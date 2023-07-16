@@ -1,9 +1,12 @@
 
 <?php
+    $CONFIG = parse_ini_file("backend/config.ini");
 
-    $url = "/content/login.php";
-    $location = 'https://' . $_SERVER['HTTP_HOST'] . $url; #$_SERVER['REQUEST_URI'];
-    echo("<p>".$location."</p>");
+    print_r($CONFIG);
+
+    $url = $CONFIG["LANDING_PAGE"]; #"/content/login.php";
+    $location = $CONFIG["PROTOCOL"].'://' . $_SERVER['HTTP_HOST'] . $url; #$_SERVER['REQUEST_URI'];
+    #echo("<p>".$location."</p>");
     header('Location: ' . $location);
     exit;
 

@@ -18,7 +18,7 @@
         foreach ($_POST as $key => $value){
             #echo ("<li>" . $key .": ". $value. "</li><br>");
         }
-
+        
 
         # check for POST:action and set if not exist default value
         $id = isset($_POST['action']) ? $_POST['action'] : null;
@@ -32,6 +32,9 @@
 
                 # username: $_POST['uname']
                 # password: $_POST['upawd']
+
+                
+
 
                 break;
             
