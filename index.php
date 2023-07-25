@@ -4,10 +4,9 @@
 
     print_r($CONFIG);
 
-    $url = $CONFIG["LANDING_PAGE"]; #"/content/login.php";
+    $url = $CONFIG["LANDING_PAGE"]; #"/content/login.php"; // go to landing page
     $location = $CONFIG["PROTOCOL"].'://' . $_SERVER['HTTP_HOST'] . $url; #$_SERVER['REQUEST_URI'];
-    #echo("<p>".$location."</p>");
-    header('Location: ' . $location);
+    header('Location: ' . $location); # go to set kocation
     exit;
 
 ?>
