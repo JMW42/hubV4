@@ -6,8 +6,6 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 
-//
-
 $KEY_HUBUSER = "HUBUSER";
 $KEY_HUBUSER_ID = "ID";
 $KEY_HUBUSER_STATUS = "STATUS";
@@ -17,13 +15,15 @@ $KEY_HUBUSER_PASSWORD = "PASSWORD";
 
 
 function set_hubuser_session($DATA){
+    // set hubuser session object to given values in data
     global $KEY_HUBUSER;
     $_SESSION[$KEY_HUBUSER]=$DATA;
 }
 
 
 function get_hubuser_name(){
-    return $_SESSION[$KEY_HUBUSER][$KEY_HUBUSER_USERNAME];
+    // returns the username of given hubuser
+    return isset($_SESSION[$KEY_HUBUSER]) ? $_SESSION[$KEY_HUBUSER][$KEY_HUBUSER_USERNAME]: "unknown";
 }
 
 

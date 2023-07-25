@@ -1,23 +1,16 @@
 <form action="" method="post">
 
     <label for="uname">Username:</label><br>
-    <input type="text" name="uname" id=""><br>
-    
-    <br>
-
+    <input type="text" name="uname" id=""><br><br>
     <label for="upawd">Password:</label><br>
-    <input type="password" name="upawd" id=""><br>
-
-    <br>
-
+    <input type="password" name="upawd" id=""><br><br>
     <button type="submit" name="action" value="login">Submit Credentials</button>
-    <!-- <button type="submit" name="action" value="login2">Submit Credentials 2</button> -->
+
 
     <?php
 
-        $CONFIG = parse_ini_file("../backend/config.ini");
+        $CONFIG = parse_ini_file("../backend/config.ini"); // get config
         
-
         # check for POST:action and set if not exist default value
         $action = isset($_POST['action']) ? $_POST['action'] : '';
         $msg = "";
